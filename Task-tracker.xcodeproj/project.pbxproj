@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494919AB6811C976BEF08FAA /* Pods_Task_tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98E8CE7BB6C153B08D1C03D /* Pods_Task_tracker.framework */; };
 		84F11E96212F523600410205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F11E95212F523600410205 /* AppDelegate.swift */; };
 		84F11E98212F523600410205 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F11E97212F523600410205 /* FirstViewController.swift */; };
 		84F11E9A212F523600410205 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F11E99212F523600410205 /* SecondViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4392E93F1F7132BBB7D6D72C /* Pods-Task-tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Task-tracker/Pods-Task-tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		84F11E92212F523600410205 /* Task-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F11E95212F523600410205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F11E97212F523600410205 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		84F11E9E212F523700410205 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F11EA1212F523700410205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84F11EA3212F523700410205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2B5D94BD9C0D22FD0635AFB /* Pods-Task-tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Task-tracker/Pods-Task-tracker.release.xcconfig"; sourceTree = "<group>"; };
+		B98E8CE7BB6C153B08D1C03D /* Pods_Task_tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494919AB6811C976BEF08FAA /* Pods_Task_tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				84F11E94212F523600410205 /* Task-tracker */,
 				84F11E93212F523600410205 /* Products */,
+				E74ADCC8E56872E6AAA15611 /* Pods */,
+				F78BD9DCA8D97B07D843AA0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "Task-tracker";
 			sourceTree = "<group>";
 		};
+		E74ADCC8E56872E6AAA15611 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4392E93F1F7132BBB7D6D72C /* Pods-Task-tracker.debug.xcconfig */,
+				B2B5D94BD9C0D22FD0635AFB /* Pods-Task-tracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F78BD9DCA8D97B07D843AA0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B98E8CE7BB6C153B08D1C03D /* Pods_Task_tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84F11EA6212F523700410205 /* Build configuration list for PBXNativeTarget "Task-tracker" */;
 			buildPhases = (
+				5AE21B5252DA2D002EECDCB8 /* [CP] Check Pods Manifest.lock */,
 				84F11E8E212F523600410205 /* Sources */,
 				84F11E8F212F523600410205 /* Frameworks */,
 				84F11E90212F523600410205 /* Resources */,
@@ -132,6 +157,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AE21B5252DA2D002EECDCB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Task-tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84F11E8E212F523600410205 /* Sources */ = {
@@ -282,15 +328,13 @@
 		};
 		84F11EA7212F523700410205 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4392E93F1F7132BBB7D6D72C /* Pods-Task-tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LLDD7HWZK;
 				INFOPLIST_FILE = "Task-tracker/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.Slava-Kornienko.Task-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -300,15 +344,13 @@
 		};
 		84F11EA8212F523700410205 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2B5D94BD9C0D22FD0635AFB /* Pods-Task-tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LLDD7HWZK;
 				INFOPLIST_FILE = "Task-tracker/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.Slava-Kornienko.Task-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
