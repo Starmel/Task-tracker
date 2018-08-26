@@ -9,9 +9,8 @@ import RxSwift
 
 protocol TaskTimerUseCase {
 
-    func enableTimer(task: TaskEntity)
-    func stopTimer(task: TaskEntity)
-    func subscribeTimer(task: TaskEntity) -> Observable<TimeInterval>
+    func enableTimer(_ task: TaskEntity)
+    func stopTimer(_ task: TaskEntity)
     func saveAll()
 }
 
@@ -26,7 +25,7 @@ class TaskTimerUseCaseImp: TaskTimerUseCase {
         self.taskGateway = taskGateway
     }
 
-    func enableTimer(task: TaskEntity) {
+    func enableTimer(_ task: TaskEntity) {
         if !task.timerInfo.isRunning {
             task.timerInfo.isRunning = true
             task.timerInfo.runTimestamp = Date().timeIntervalSince1970
@@ -35,7 +34,7 @@ class TaskTimerUseCaseImp: TaskTimerUseCase {
         }
     }
 
-    func stopTimer(task: TaskEntity) {
+    func stopTimer(_ task: TaskEntity) {
         if task.timerInfo.isRunning {
             task.timerInfo.updateTotalTime()
             task.timerInfo.isRunning = false
@@ -44,14 +43,6 @@ class TaskTimerUseCaseImp: TaskTimerUseCase {
             }
             _ = taskGateway.addOrUpdate(task).subscribe()
         }
-    }
-
-    func subscribeTimer(task: TaskEntity) -> Observable<TimeInterval> {
-        return Observable<Int>.interval(1 / 1000, scheduler: MainScheduler.instance)
-                .map { _ -> TimeInterval in
-                    let pastTime = Date().timeIntervalSince1970 - task.timerInfo.runTimestamp
-                    return pastTime + task.timerInfo.totalTime
-                }
     }
 
     func saveAll() {

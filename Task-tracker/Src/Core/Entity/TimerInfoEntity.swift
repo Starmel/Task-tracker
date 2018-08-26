@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import RxSwift
 
 
 class TimerInfoEntity {
@@ -13,15 +14,30 @@ class TimerInfoEntity {
     var runTimestamp: TimeInterval = 0
     var stopTimestamp: TimeInterval = 0
 
+
     func addTime(_ time: TimeInterval) {
         totalTime += time
     }
 
     func updateTotalTime() {
         let currentTime = Date().timeIntervalSince1970
-        let pastTime = currentTime - runTimestamp
+        let pastTime = runTimestamp != 0 ? currentTime - runTimestamp : 0
         runTimestamp = currentTime
         addTime(pastTime)
+    }
+
+    func elapsedTime() -> TimeInterval {
+        if isRunning {
+            let pastTime = runTimestamp != 0 ? Date().timeIntervalSince1970 - runTimestamp : 0
+            return pastTime + totalTime
+        } else {
+            return totalTime
+        }
+    }
+
+    func timerUpdate() -> Observable<TimeInterval> {
+        return Observable<Int>.interval(1 / 1000, scheduler: MainScheduler.instance)
+                .map { _ in self.elapsedTime() }
     }
 }
 

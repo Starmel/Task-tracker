@@ -63,6 +63,13 @@ class ActiveTasksPresenterImp: ActiveTasksPresenter {
     }
 
     func selectTask(at: Int) {
+        let task = tasks[at]
+        if task.timerInfo.isRunning {
+            taskTimer.stopTimer(task)
+        } else {
+            taskTimer.enableTimer(task)
+        }
+        view.refresh()
     }
 
     func showTaskInfo(at: Int) {
@@ -74,6 +81,6 @@ class ActiveTasksPresenterImp: ActiveTasksPresenter {
     }
 
     func saveState() {
-        // TODO 27.08.2018/admin сохранять время активных задач
+        taskTimer.saveAll()
     }
 }
