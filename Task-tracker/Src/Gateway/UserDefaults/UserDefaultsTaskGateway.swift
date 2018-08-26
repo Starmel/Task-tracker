@@ -9,12 +9,19 @@ import RxSwift
 
 class UserDefaultsTaskGateway: BaseUserDefaultsGateway, TaskGateway {
 
+    private static let TASKS_LIST_KEY = "task_list"
+
+
     func addOrUpdate(_ task: TaskEntity) -> Completable {
-        return Completable.empty()
+        return readRx(.tasksList)
+                .flatMapCompletable { (list: [TaskEntity]) -> Completable in
+                    var tasks = list
+                    tasks.append(task)
+                    return self.saveRx(.tasksList, tasks)
+                }
     }
 
     func getAll() -> Single<[TaskEntity]> {
-        return Single.just([TaskEntity(false, "Не идет"),
-                            TaskEntity(true, "Идет")])
+        return readRx(.tasksList)
     }
 }

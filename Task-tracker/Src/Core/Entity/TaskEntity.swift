@@ -6,7 +6,7 @@
 import Foundation
 
 
-class TaskEntity {
+class TaskEntity: Codable {
 
     var timerInfo = TimerInfoEntity()
     var description: String? = nil

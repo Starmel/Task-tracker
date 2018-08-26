@@ -7,7 +7,7 @@ import Foundation
 import RxSwift
 
 
-class TimerInfoEntity {
+class TimerInfoEntity: Codable {
 
     var isRunning: Bool = false
     var totalTime: TimeInterval = 0
