@@ -1,4 +1,6 @@
 PODS:
+  - DITranquillity (3.3.7):
+    - SwiftLazy
   - IQKeyboardManager (6.1.1)
   - Realm (3.7.6):
     - Realm/Headers (= 3.7.6)
@@ -6,25 +8,31 @@ PODS:
   - RealmSwift (3.7.6):
     - Realm (= 3.7.6)
   - RxSwift (4.2.0)
+  - SwiftLazy (1.0.3)
 
 DEPENDENCIES:
+  - DITranquillity
   - IQKeyboardManager (~> 6.1.1)
   - RealmSwift (~> 3.7.6)
   - RxSwift (~> 4.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - DITranquillity
     - IQKeyboardManager
     - Realm
     - RealmSwift
     - RxSwift
+    - SwiftLazy
 
 SPEC CHECKSUMS:
+  DITranquillity: aa166862a288fa17a208a5dc5ba0df8d37e0db22
   IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
   Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
   RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  SwiftLazy: e464d0cc0816802c8d76788e6b3ba40807684f5b
 
-PODFILE CHECKSUM: b5f523d25e0df65cead2db3e8fed2878f4e52c6f
+PODFILE CHECKSUM: 2ce6433abdf1913940cedc389fe0760c07011418
 
 COCOAPODS: 1.5.0

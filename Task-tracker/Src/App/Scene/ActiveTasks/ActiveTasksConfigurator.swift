@@ -1,5 +1,6 @@
 import UIKit
 import RxSwift
+import DITranquillity
 
 
 protocol ActiveTasksConfigurator {
@@ -11,8 +12,9 @@ protocol ActiveTasksConfigurator {
 class ActiveTasksConfiguratorImp: ActiveTasksConfigurator {
 
     func configure(view: ActiveTasksViewController) {
+        let tasksGateway: TaskGateway = AppDependencies.container.resolve()
         let router = ActiveTasksRouterImp(view)
-        let presenter = ActiveTasksPresenterImp(view, router)
+        let presenter = ActiveTasksPresenterImp(view, router, tasksGateway)
         view.presenter = presenter
     }
 }

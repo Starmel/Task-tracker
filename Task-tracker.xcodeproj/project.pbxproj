@@ -9,15 +9,22 @@
 /* Begin PBXBuildFile section */
 		494919AB6811C976BEF08FAA /* Pods_Task_tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98E8CE7BB6C153B08D1C03D /* Pods_Task_tracker.framework */; };
 		586034228C2809FEF5F000C8 /* ActiveTasksConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860304B8BC4EE1CFB211ED7 /* ActiveTasksConfigurator.swift */; };
+		5860342AF8D7312528CCF609 /* UITableViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603A23D89A3B2348BB64D1 /* UITableViewUtil.swift */; };
+		586034EC24DC6713E80C53A3 /* BaseUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603B5EABB2AC6B9D78E9BE /* BaseUITableViewController.swift */; };
+		58603507495979CFA646857D /* UIColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860399B3DEAE7653D77F783 /* UIColorUtil.swift */; };
 		5860357942C90822B1943264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586033D7E0F58E9305D59783 /* Main.storyboard */; };
 		586035E2A7583962BDDCE3C7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603E873CBC8344F1D6C5CE /* SecondViewController.swift */; };
 		58603632AC97AC84D98C4D2B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586032259D39B027E868CB43 /* RootViewController.swift */; };
 		58603653E0DD3C8F576C58C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586031C1429BB8C1394F5811 /* Assets.xcassets */; };
-		586036A81BDFCB3AE1871CCF /* UIColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603DF5B8171B432FDFE70C /* UIColorUtil.swift */; };
-		58603BD541E348F971B51E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586037F7DC6EA907D3115FA9 /* AppDelegate.swift */; };
+		586039218B767D6BC3D28B87 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603B22FC9C491A4189E66B /* AppDependencies.swift */; };
+		586039C13C3B7E8173ABD2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603F18AC98CF44A890B247 /* AppDelegate.swift */; };
+		58603BFA70FEC1C3B473BC1A /* TaskGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860337902FF6AB32662C594 /* TaskGateway.swift */; };
 		58603C5CC84C85DFD2845581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58603423EC872890D90DB28D /* LaunchScreen.storyboard */; };
 		58603CCE6BDBB5F100606397 /* ActiveTasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603A5CADCC5BA4B264FB82 /* ActiveTasksPresenter.swift */; };
-		58603D35A5C3600D393EC188 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603559F92AEC4B6B5AC9D3 /* FirstViewController.swift */; };
+		58603D35A5C3600D393EC188 /* ActiveTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603559F92AEC4B6B5AC9D3 /* ActiveTasksViewController.swift */; };
+		58603D5BB35AB78D472959AD /* BaseUserPrefenceGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603BC24323B6785FDB63B6 /* BaseUserPrefenceGateway.swift */; };
+		58603E613E28242371A9C870 /* TaskEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603CF18D2581582F5C1D38 /* TaskEntity.swift */; };
+		58603F45A921D8C5B8D22041 /* UserDefaultsTaskGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860391E36F6A5A5D74FFCDC /* UserDefaultsTaskGateway.swift */; };
 		58603FA3DC286323F781E511 /* ActiveTasksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603A8F2DB4B70ECCE48CC7 /* ActiveTasksRouter.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,14 +34,21 @@
 		586031C1429BB8C1394F5811 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		586032259D39B027E868CB43 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		58603236B0D84B502F9A9146 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5860337902FF6AB32662C594 /* TaskGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskGateway.swift; sourceTree = "<group>"; };
 		586033D7E0F58E9305D59783 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		58603423EC872890D90DB28D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		58603559F92AEC4B6B5AC9D3 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		586037F7DC6EA907D3115FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		58603559F92AEC4B6B5AC9D3 /* ActiveTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveTasksViewController.swift; sourceTree = "<group>"; };
+		5860391E36F6A5A5D74FFCDC /* UserDefaultsTaskGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsTaskGateway.swift; sourceTree = "<group>"; };
+		5860399B3DEAE7653D77F783 /* UIColorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorUtil.swift; sourceTree = "<group>"; };
+		58603A23D89A3B2348BB64D1 /* UITableViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewUtil.swift; sourceTree = "<group>"; };
 		58603A5CADCC5BA4B264FB82 /* ActiveTasksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveTasksPresenter.swift; sourceTree = "<group>"; };
 		58603A8F2DB4B70ECCE48CC7 /* ActiveTasksRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveTasksRouter.swift; sourceTree = "<group>"; };
-		58603DF5B8171B432FDFE70C /* UIColorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorUtil.swift; sourceTree = "<group>"; };
+		58603B22FC9C491A4189E66B /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		58603B5EABB2AC6B9D78E9BE /* BaseUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITableViewController.swift; sourceTree = "<group>"; };
+		58603BC24323B6785FDB63B6 /* BaseUserPrefenceGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUserPrefenceGateway.swift; sourceTree = "<group>"; };
+		58603CF18D2581582F5C1D38 /* TaskEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEntity.swift; sourceTree = "<group>"; };
 		58603E873CBC8344F1D6C5CE /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		58603F18AC98CF44A890B247 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F11E92212F523600410205 /* Task-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B5D94BD9C0D22FD0635AFB /* Pods-Task-tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Task-tracker/Pods-Task-tracker.release.xcconfig"; sourceTree = "<group>"; };
 		B98E8CE7BB6C153B08D1C03D /* Pods_Task_tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +79,6 @@
 				586033FD90374F68D62B559F /* Core */,
 				58603EF13C2E8EAA603362E9 /* Gateway */,
 				58603D94BAAD82A9F8FC1EF4 /* App */,
-				586037F7DC6EA907D3115FA9 /* AppDelegate.swift */,
 			);
 			path = Src;
 			sourceTree = "<group>";
@@ -73,6 +86,7 @@
 		586030B2A3E4964BFD36697F /* Gateway */ = {
 			isa = PBXGroup;
 			children = (
+				5860337902FF6AB32662C594 /* TaskGateway.swift */,
 			);
 			path = Gateway;
 			sourceTree = "<group>";
@@ -83,7 +97,7 @@
 				586038ACD2F0C740F2C065FB /* Root */,
 				5860370337D4E21BB4534CD2 /* ActiveTasks */,
 				58603C33EE3BB41C036AD9E3 /* SecondTab */,
-				58603EAEAE48EE622F97F3F8 /* Util */,
+				586035DBA1A26A175AAFBF87 /* Base */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -98,10 +112,27 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		5860355F634951008BFA9393 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5860399B3DEAE7653D77F783 /* UIColorUtil.swift */,
+				58603A23D89A3B2348BB64D1 /* UITableViewUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		586035DBA1A26A175AAFBF87 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				58603B5EABB2AC6B9D78E9BE /* BaseUITableViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		5860370337D4E21BB4534CD2 /* ActiveTasks */ = {
 			isa = PBXGroup;
 			children = (
-				58603559F92AEC4B6B5AC9D3 /* FirstViewController.swift */,
+				58603559F92AEC4B6B5AC9D3 /* ActiveTasksViewController.swift */,
 				5860304B8BC4EE1CFB211ED7 /* ActiveTasksConfigurator.swift */,
 				58603A8F2DB4B70ECCE48CC7 /* ActiveTasksRouter.swift */,
 				58603A5CADCC5BA4B264FB82 /* ActiveTasksPresenter.swift */,
@@ -112,6 +143,7 @@
 		586037F0913266E396EB1AE5 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				58603CF18D2581582F5C1D38 /* TaskEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -134,6 +166,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		58603BABD4D26B8D0B72989C /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				58603BC24323B6785FDB63B6 /* BaseUserPrefenceGateway.swift */,
+				5860391E36F6A5A5D74FFCDC /* UserDefaultsTaskGateway.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		58603C33EE3BB41C036AD9E3 /* SecondTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,21 +187,17 @@
 			isa = PBXGroup;
 			children = (
 				5860339C0F88E166CE82938B /* Scene */,
+				5860355F634951008BFA9393 /* Util */,
+				58603B22FC9C491A4189E66B /* AppDependencies.swift */,
+				58603F18AC98CF44A890B247 /* AppDelegate.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		58603EAEAE48EE622F97F3F8 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				58603DF5B8171B432FDFE70C /* UIColorUtil.swift */,
-			);
-			path = Util;
 			sourceTree = "<group>";
 		};
 		58603EF13C2E8EAA603362E9 /* Gateway */ = {
 			isa = PBXGroup;
 			children = (
+				58603BABD4D26B8D0B72989C /* UserDefaults */,
 			);
 			path = Gateway;
 			sourceTree = "<group>";
@@ -304,17 +341,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Task-tracker/Pods-Task-tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DITranquillity/DITranquillity.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftLazy/SwiftLazy.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DITranquillity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLazy.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -328,14 +369,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58603BD541E348F971B51E0D /* AppDelegate.swift in Sources */,
 				58603632AC97AC84D98C4D2B /* RootViewController.swift in Sources */,
-				58603D35A5C3600D393EC188 /* FirstViewController.swift in Sources */,
+				58603D35A5C3600D393EC188 /* ActiveTasksViewController.swift in Sources */,
 				586035E2A7583962BDDCE3C7 /* SecondViewController.swift in Sources */,
-				586036A81BDFCB3AE1871CCF /* UIColorUtil.swift in Sources */,
 				586034228C2809FEF5F000C8 /* ActiveTasksConfigurator.swift in Sources */,
 				58603FA3DC286323F781E511 /* ActiveTasksRouter.swift in Sources */,
 				58603CCE6BDBB5F100606397 /* ActiveTasksPresenter.swift in Sources */,
+				58603E613E28242371A9C870 /* TaskEntity.swift in Sources */,
+				58603BFA70FEC1C3B473BC1A /* TaskGateway.swift in Sources */,
+				58603D5BB35AB78D472959AD /* BaseUserPrefenceGateway.swift in Sources */,
+				58603F45A921D8C5B8D22041 /* UserDefaultsTaskGateway.swift in Sources */,
+				58603507495979CFA646857D /* UIColorUtil.swift in Sources */,
+				586039218B767D6BC3D28B87 /* AppDependencies.swift in Sources */,
+				586039C13C3B7E8173ABD2A7 /* AppDelegate.swift in Sources */,
+				5860342AF8D7312528CCF609 /* UITableViewUtil.swift in Sources */,
+				586034EC24DC6713E80C53A3 /* BaseUITableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,10 +513,7 @@
 				DEVELOPMENT_TEAM = 8LLDD7HWZK;
 				INFOPLIST_FILE = "Task-tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.Slava-Kornienko.Task-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -485,10 +530,7 @@
 				DEVELOPMENT_TEAM = 8LLDD7HWZK;
 				INFOPLIST_FILE = "Task-tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.Slava-Kornienko.Task-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
