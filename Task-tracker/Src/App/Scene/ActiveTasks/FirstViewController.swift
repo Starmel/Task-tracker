@@ -9,11 +9,15 @@
 import UIKit
 
 
-class FirstViewController: UITableViewController {
+class ActiveTasksViewController: UITableViewController {
+
+    var presenter: ActiveTasksPresenter!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        ActiveTasksConfiguratorImp().configure(view: self)
+        presenter.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,3 +72,6 @@ class FirstViewController: UITableViewController {
     }
 }
 
+
+extension ActiveTasksViewController: ActiveTasksView {
+}

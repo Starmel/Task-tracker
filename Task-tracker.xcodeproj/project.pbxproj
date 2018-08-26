@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		494919AB6811C976BEF08FAA /* Pods_Task_tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98E8CE7BB6C153B08D1C03D /* Pods_Task_tracker.framework */; };
+		586034228C2809FEF5F000C8 /* ActiveTasksConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860304B8BC4EE1CFB211ED7 /* ActiveTasksConfigurator.swift */; };
 		5860357942C90822B1943264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586033D7E0F58E9305D59783 /* Main.storyboard */; };
 		586035E2A7583962BDDCE3C7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603E873CBC8344F1D6C5CE /* SecondViewController.swift */; };
 		58603632AC97AC84D98C4D2B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586032259D39B027E868CB43 /* RootViewController.swift */; };
@@ -15,11 +16,14 @@
 		586036A81BDFCB3AE1871CCF /* UIColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603DF5B8171B432FDFE70C /* UIColorUtil.swift */; };
 		58603BD541E348F971B51E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586037F7DC6EA907D3115FA9 /* AppDelegate.swift */; };
 		58603C5CC84C85DFD2845581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58603423EC872890D90DB28D /* LaunchScreen.storyboard */; };
+		58603CCE6BDBB5F100606397 /* ActiveTasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603A5CADCC5BA4B264FB82 /* ActiveTasksPresenter.swift */; };
 		58603D35A5C3600D393EC188 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603559F92AEC4B6B5AC9D3 /* FirstViewController.swift */; };
+		58603FA3DC286323F781E511 /* ActiveTasksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603A8F2DB4B70ECCE48CC7 /* ActiveTasksRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4392E93F1F7132BBB7D6D72C /* Pods-Task-tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Task-tracker/Pods-Task-tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		5860304B8BC4EE1CFB211ED7 /* ActiveTasksConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveTasksConfigurator.swift; sourceTree = "<group>"; };
 		586031C1429BB8C1394F5811 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		586032259D39B027E868CB43 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		58603236B0D84B502F9A9146 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +31,8 @@
 		58603423EC872890D90DB28D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58603559F92AEC4B6B5AC9D3 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		586037F7DC6EA907D3115FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		58603A5CADCC5BA4B264FB82 /* ActiveTasksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveTasksPresenter.swift; sourceTree = "<group>"; };
+		58603A8F2DB4B70ECCE48CC7 /* ActiveTasksRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveTasksRouter.swift; sourceTree = "<group>"; };
 		58603DF5B8171B432FDFE70C /* UIColorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorUtil.swift; sourceTree = "<group>"; };
 		58603E873CBC8344F1D6C5CE /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		84F11E92212F523600410205 /* Task-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				58603559F92AEC4B6B5AC9D3 /* FirstViewController.swift */,
+				5860304B8BC4EE1CFB211ED7 /* ActiveTasksConfigurator.swift */,
+				58603A8F2DB4B70ECCE48CC7 /* ActiveTasksRouter.swift */,
+				58603A5CADCC5BA4B264FB82 /* ActiveTasksPresenter.swift */,
 			);
 			path = ActiveTasks;
 			sourceTree = "<group>";
@@ -324,6 +333,9 @@
 				58603D35A5C3600D393EC188 /* FirstViewController.swift in Sources */,
 				586035E2A7583962BDDCE3C7 /* SecondViewController.swift in Sources */,
 				586036A81BDFCB3AE1871CCF /* UIColorUtil.swift in Sources */,
+				586034228C2809FEF5F000C8 /* ActiveTasksConfigurator.swift in Sources */,
+				58603FA3DC286323F781E511 /* ActiveTasksRouter.swift in Sources */,
+				58603CCE6BDBB5F100606397 /* ActiveTasksPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
