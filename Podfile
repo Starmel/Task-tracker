@@ -11,4 +11,8 @@ target 'Task-tracker' do
   pod 'IQKeyboardManager', '~> 6.1.1'
   pod 'DITranquillity'
 
+  target 'Task-tracker Tests' do
+    inherit! :complete
+  end
+
 end

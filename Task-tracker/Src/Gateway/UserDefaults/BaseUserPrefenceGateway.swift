@@ -26,7 +26,7 @@ class BaseUserDefaultsGateway {
     }
 
     func save<T: Codable>(_ key: String, _ value: T?) {
-        print("UserSettings: save '\(key)' = '\(value)'")
+        print("UserSettings: save '\(key)' = '\(value ?? ("!nil!" as Any))'")
         if value == nil {
             defaults.set(nil, forKey: key)
             return

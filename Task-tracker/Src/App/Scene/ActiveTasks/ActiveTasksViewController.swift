@@ -20,6 +20,11 @@ class ActiveTasksViewController: BaseUITableViewController {
         presenter.viewDidLoad()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter.saveState()
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         if presenter.countOfTasks > 0 {
             self.isPullToRefreshEnabled = true

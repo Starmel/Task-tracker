@@ -14,7 +14,7 @@ class ActiveCellTaskCell: UITableViewCell, ActiveTaskCell {
 
 
     func setup(_ task: TaskEntity) {
-        statusIcon.image = task.isRunning ? UIImage(named: "pause") : UIImage(named: "play")
+        statusIcon.image = task.timerInfo.isRunning ? UIImage(named: "pause") : UIImage(named: "play")
 
         if let desc = task.description {
             descriptionLabel.text = desc

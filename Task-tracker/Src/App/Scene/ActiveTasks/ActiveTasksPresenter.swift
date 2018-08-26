@@ -12,6 +12,7 @@ protocol ActiveTasksPresenter {
     func selectTask(at: Int)
     func showTaskInfo(at: Int)
     func doneTask(at: Int)
+    func saveState()
 }
 
 
@@ -30,6 +31,7 @@ class ActiveTasksPresenterImp: ActiveTasksPresenter {
     private let view: ActiveTasksView
     private let router: ActiveTasksRouter
     private let tasksGateway: TaskGateway
+    private let taskTimer: TaskTimerUseCase
     private var tasks = [TaskEntity]()
     private(set) var isLoadingStatus: Bool = false
     private(set) var emptyListMessage: String = "Ого! У кого-то нет задач"
@@ -38,10 +40,14 @@ class ActiveTasksPresenterImp: ActiveTasksPresenter {
     }
 
 
-    init(_ view: ActiveTasksView, _ router: ActiveTasksRouter, _ tasksGateway: TaskGateway) {
+    init(_ view: ActiveTasksView,
+         _ router: ActiveTasksRouter,
+         _ tasksGateway: TaskGateway,
+         _ taskTimer: TaskTimerUseCase) {
         self.view = view
         self.router = router
         self.tasksGateway = tasksGateway
+        self.taskTimer = taskTimer
     }
 
     func viewDidLoad() {
@@ -60,8 +66,14 @@ class ActiveTasksPresenterImp: ActiveTasksPresenter {
     }
 
     func showTaskInfo(at: Int) {
+        // TODO 27.08.2018/admin открывать инфомаицю с подрброной ифнформацией
     }
 
     func doneTask(at: Int) {
+        // TODO 27.08.2018/admin переводить задачу на следующий трекер
+    }
+
+    func saveState() {
+        // TODO 27.08.2018/admin сохранять время активных задач
     }
 }

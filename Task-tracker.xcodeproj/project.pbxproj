@@ -17,8 +17,11 @@
 		586035E2A7583962BDDCE3C7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603E873CBC8344F1D6C5CE /* SecondViewController.swift */; };
 		58603632AC97AC84D98C4D2B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586032259D39B027E868CB43 /* RootViewController.swift */; };
 		58603653E0DD3C8F576C58C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586031C1429BB8C1394F5811 /* Assets.xcassets */; };
+		5860374DBFB44363C7A3A915 /* TaskTimerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603AEEA0E6C13AC0BA336F /* TaskTimerUseCase.swift */; };
 		586039218B767D6BC3D28B87 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603B22FC9C491A4189E66B /* AppDependencies.swift */; };
+		5860397700ABA581C9068713 /* TimerInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603EA6F015EB05848DB111 /* TimerInfoEntity.swift */; };
 		586039C13C3B7E8173ABD2A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603F18AC98CF44A890B247 /* AppDelegate.swift */; };
+		58603AF7414B47CFC60E1A30 /* TaskTimerUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603967AA19A3834400774C /* TaskTimerUseCaseTest.swift */; };
 		58603BFA70FEC1C3B473BC1A /* TaskGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860337902FF6AB32662C594 /* TaskGateway.swift */; };
 		58603C5CC84C85DFD2845581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58603423EC872890D90DB28D /* LaunchScreen.storyboard */; };
 		58603CCE6BDBB5F100606397 /* ActiveTasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603A5CADCC5BA4B264FB82 /* ActiveTasksPresenter.swift */; };
@@ -27,7 +30,19 @@
 		58603E613E28242371A9C870 /* TaskEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603CF18D2581582F5C1D38 /* TaskEntity.swift */; };
 		58603F45A921D8C5B8D22041 /* UserDefaultsTaskGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860391E36F6A5A5D74FFCDC /* UserDefaultsTaskGateway.swift */; };
 		58603FA3DC286323F781E511 /* ActiveTasksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603A8F2DB4B70ECCE48CC7 /* ActiveTasksRouter.swift */; };
+		84F11EB02133541100410205 /* Task_tracker_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F11EAF2133541100410205 /* Task_tracker_Tests.swift */; };
+		EFB4AFDCDB80135A2A4024CC /* Pods_Task_tracker_Task_tracker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C174D9ED687A0FD5A33CC1D /* Pods_Task_tracker_Task_tracker_Tests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84F11EB22133541100410205 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F11E8A212F523600410205 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F11E91212F523600410205;
+			remoteInfo = "Task-tracker";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4392E93F1F7132BBB7D6D72C /* Pods-Task-tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Task-tracker/Pods-Task-tracker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -40,20 +55,29 @@
 		58603423EC872890D90DB28D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58603559F92AEC4B6B5AC9D3 /* ActiveTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveTasksViewController.swift; sourceTree = "<group>"; };
 		5860391E36F6A5A5D74FFCDC /* UserDefaultsTaskGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsTaskGateway.swift; sourceTree = "<group>"; };
+		58603967AA19A3834400774C /* TaskTimerUseCaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTimerUseCaseTest.swift; sourceTree = "<group>"; };
 		5860399B3DEAE7653D77F783 /* UIColorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorUtil.swift; sourceTree = "<group>"; };
 		58603A23D89A3B2348BB64D1 /* UITableViewUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewUtil.swift; sourceTree = "<group>"; };
 		58603A5CADCC5BA4B264FB82 /* ActiveTasksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveTasksPresenter.swift; sourceTree = "<group>"; };
 		58603A8F2DB4B70ECCE48CC7 /* ActiveTasksRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveTasksRouter.swift; sourceTree = "<group>"; };
+		58603AEEA0E6C13AC0BA336F /* TaskTimerUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTimerUseCase.swift; sourceTree = "<group>"; };
 		58603AFACD4F96A6BD6BF0E8 /* ActiveCellTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveCellTaskCell.swift; sourceTree = "<group>"; };
 		58603B22FC9C491A4189E66B /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		58603B5EABB2AC6B9D78E9BE /* BaseUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITableViewController.swift; sourceTree = "<group>"; };
 		58603BC24323B6785FDB63B6 /* BaseUserPrefenceGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUserPrefenceGateway.swift; sourceTree = "<group>"; };
 		58603CF18D2581582F5C1D38 /* TaskEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEntity.swift; sourceTree = "<group>"; };
 		58603E873CBC8344F1D6C5CE /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		58603EA6F015EB05848DB111 /* TimerInfoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerInfoEntity.swift; sourceTree = "<group>"; };
 		58603F18AC98CF44A890B247 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		68A55291860D2E7F3278BC1E /* Pods-Task-tracker-Task-tracker Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-tracker-Task-tracker Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Task-tracker-Task-tracker Tests/Pods-Task-tracker-Task-tracker Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		84F11E92212F523600410205 /* Task-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F11EAD2133541100410205 /* Task-tracker Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Task-tracker Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F11EAF2133541100410205 /* Task_tracker_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_tracker_Tests.swift; sourceTree = "<group>"; };
+		84F11EB12133541100410205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C174D9ED687A0FD5A33CC1D /* Pods_Task_tracker_Task_tracker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_tracker_Task_tracker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B5D94BD9C0D22FD0635AFB /* Pods-Task-tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Task-tracker/Pods-Task-tracker.release.xcconfig"; sourceTree = "<group>"; };
 		B98E8CE7BB6C153B08D1C03D /* Pods_Task_tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Task_tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9FF22C461EA7C80A495649 /* Pods-Task-tracker-Task-tracker Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-tracker-Task-tracker Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Task-tracker-Task-tracker Tests/Pods-Task-tracker-Task-tracker Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +89,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84F11EAA2133541100410205 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFB4AFDCDB80135A2A4024CC /* Pods_Task_tracker_Task_tracker_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		5860301EC68FD6C9161C7899 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				58603AEEA0E6C13AC0BA336F /* TaskTimerUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -147,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				58603CF18D2581582F5C1D38 /* TaskEntity.swift */,
+				58603EA6F015EB05848DB111 /* TimerInfoEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -209,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				84F11E94212F523600410205 /* Task-tracker */,
+				84F11EAE2133541100410205 /* Task-tracker Tests */,
 				84F11E93212F523600410205 /* Products */,
 				E74ADCC8E56872E6AAA15611 /* Pods */,
 				F78BD9DCA8D97B07D843AA0B /* Frameworks */,
@@ -219,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				84F11E92212F523600410205 /* Task-tracker.app */,
+				84F11EAD2133541100410205 /* Task-tracker Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,11 +269,23 @@
 			path = "Task-tracker";
 			sourceTree = "<group>";
 		};
+		84F11EAE2133541100410205 /* Task-tracker Tests */ = {
+			isa = PBXGroup;
+			children = (
+				84F11EAF2133541100410205 /* Task_tracker_Tests.swift */,
+				84F11EB12133541100410205 /* Info.plist */,
+				58603967AA19A3834400774C /* TaskTimerUseCaseTest.swift */,
+			);
+			path = "Task-tracker Tests";
+			sourceTree = "<group>";
+		};
 		E74ADCC8E56872E6AAA15611 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				4392E93F1F7132BBB7D6D72C /* Pods-Task-tracker.debug.xcconfig */,
 				B2B5D94BD9C0D22FD0635AFB /* Pods-Task-tracker.release.xcconfig */,
+				68A55291860D2E7F3278BC1E /* Pods-Task-tracker-Task-tracker Tests.debug.xcconfig */,
+				EC9FF22C461EA7C80A495649 /* Pods-Task-tracker-Task-tracker Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -246,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				B98E8CE7BB6C153B08D1C03D /* Pods_Task_tracker.framework */,
+				9C174D9ED687A0FD5A33CC1D /* Pods_Task_tracker_Task_tracker_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -272,6 +321,26 @@
 			productReference = 84F11E92212F523600410205 /* Task-tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		84F11EAC2133541100410205 /* Task-tracker Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F11EB62133541100410205 /* Build configuration list for PBXNativeTarget "Task-tracker Tests" */;
+			buildPhases = (
+				D96AE38E14639E9731A8743E /* [CP] Check Pods Manifest.lock */,
+				84F11EA92133541100410205 /* Sources */,
+				84F11EAA2133541100410205 /* Frameworks */,
+				84F11EAB2133541100410205 /* Resources */,
+				13CA15735CE2BA154B6B360E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84F11EB32133541100410205 /* PBXTargetDependency */,
+			);
+			name = "Task-tracker Tests";
+			productName = "Task-tracker Tests";
+			productReference = 84F11EAD2133541100410205 /* Task-tracker Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -284,6 +353,10 @@
 				TargetAttributes = {
 					84F11E91212F523600410205 = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					84F11EAC2133541100410205 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 84F11E91212F523600410205;
 					};
 				};
 			};
@@ -301,6 +374,7 @@
 			projectRoot = "";
 			targets = (
 				84F11E91212F523600410205 /* Task-tracker */,
+				84F11EAC2133541100410205 /* Task-tracker Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,9 +390,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84F11EAB2133541100410205 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		13CA15735CE2BA154B6B360E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Task-tracker-Task-tracker Tests/Pods-Task-tracker-Task-tracker Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DITranquillity/DITranquillity.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftLazy/SwiftLazy.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DITranquillity.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLazy.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Task-tracker-Task-tracker Tests/Pods-Task-tracker-Task-tracker Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5AE21B5252DA2D002EECDCB8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +474,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Task-tracker/Pods-Task-tracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D96AE38E14639E9731A8743E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Task-tracker-Task-tracker Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -388,10 +515,29 @@
 				5860342AF8D7312528CCF609 /* UITableViewUtil.swift in Sources */,
 				586034EC24DC6713E80C53A3 /* BaseUITableViewController.swift in Sources */,
 				586033460003B0B1E52099B9 /* ActiveCellTaskCell.swift in Sources */,
+				5860374DBFB44363C7A3A915 /* TaskTimerUseCase.swift in Sources */,
+				5860397700ABA581C9068713 /* TimerInfoEntity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F11EA92133541100410205 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F11EB02133541100410205 /* Task_tracker_Tests.swift in Sources */,
+				58603AF7414B47CFC60E1A30 /* TaskTimerUseCaseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84F11EB32133541100410205 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F11E91212F523600410205 /* Task-tracker */;
+			targetProxy = 84F11EB22133541100410205 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		84F11EA4212F523700410205 /* Debug */ = {
@@ -542,6 +688,40 @@
 			};
 			name = Release;
 		};
+		84F11EB42133541100410205 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68A55291860D2E7F3278BC1E /* Pods-Task-tracker-Task-tracker Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LLDD7HWZK;
+				INFOPLIST_FILE = "Task-tracker Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.Slava-Kornienko.Task-tracker-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Task-tracker.app/Task-tracker";
+			};
+			name = Debug;
+		};
+		84F11EB52133541100410205 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC9FF22C461EA7C80A495649 /* Pods-Task-tracker-Task-tracker Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LLDD7HWZK;
+				INFOPLIST_FILE = "Task-tracker Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.Slava-Kornienko.Task-tracker-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Task-tracker.app/Task-tracker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -559,6 +739,15 @@
 			buildConfigurations = (
 				84F11EA7212F523700410205 /* Debug */,
 				84F11EA8212F523700410205 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F11EB62133541100410205 /* Build configuration list for PBXNativeTarget "Task-tracker Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F11EB42133541100410205 /* Debug */,
+				84F11EB52133541100410205 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

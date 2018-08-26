@@ -15,5 +15,10 @@ class AppDependencies {
     static func build() {
         container.register(UserDefaults.init)
         container.register1(UserDefaultsTaskGateway.init).as(TaskGateway.self)
+        container.register1(TaskTimerUseCaseImp.init).as(TaskTimerUseCase.self)
+    }
+
+    class func resolve<T>() -> T {
+        return container.resolve()
     }
 }
