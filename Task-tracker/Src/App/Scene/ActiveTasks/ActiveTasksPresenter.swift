@@ -8,7 +8,7 @@ protocol ActiveTasksPresenter {
     var isLoadingStatus: Bool { get }
     var emptyListMessage: String { get }
     func viewDidLoad()
-    func setupItem(_ cell: UITableViewCell, _ row: Int)
+    func setupItem(_ cell: ActiveTaskCell, _ row: Int)
     func selectTask(at: Int)
     func showTaskInfo(at: Int)
     func doneTask(at: Int)
@@ -17,6 +17,11 @@ protocol ActiveTasksPresenter {
 
 protocol ActiveTasksView {
     func refresh()
+}
+
+
+protocol ActiveTaskCell {
+    func setup(_ task: TaskEntity)
 }
 
 
@@ -47,7 +52,8 @@ class ActiveTasksPresenterImp: ActiveTasksPresenter {
         })
     }
 
-    func setupItem(_ cell: UITableViewCell, _ row: Int) {
+    func setupItem(_ cell: ActiveTaskCell, _ row: Int) {
+        cell.setup(tasks[row])
     }
 
     func selectTask(at: Int) {

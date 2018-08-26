@@ -7,4 +7,13 @@ import Foundation
 
 
 class TaskEntity {
+
+    var isRunning: Bool = false
+    var description: String? = nil
+
+
+    init(_ isRunning: Bool, _ description: String) {
+        self.isRunning = isRunning
+        self.description = description
+    }
 }

@@ -14,6 +14,7 @@ class UserDefaultsTaskGateway: BaseUserDefaultsGateway, TaskGateway {
     }
 
     func getAll() -> Single<[TaskEntity]> {
-        return Single.just([])
+        return Single.just([TaskEntity(false, "Не идет"),
+                            TaskEntity(true, "Идет")])
     }
 }

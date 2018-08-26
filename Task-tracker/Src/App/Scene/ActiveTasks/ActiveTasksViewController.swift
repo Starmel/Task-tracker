@@ -48,7 +48,8 @@ class ActiveTasksViewController: BaseUITableViewController {
 
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell",
+                                                 for: indexPath) as! ActiveCellTaskCell
         presenter.setupItem(cell, indexPath.row)
         return cell
     }
