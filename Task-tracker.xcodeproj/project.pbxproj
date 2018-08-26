@@ -12,6 +12,7 @@
 		586035E2A7583962BDDCE3C7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603E873CBC8344F1D6C5CE /* SecondViewController.swift */; };
 		58603632AC97AC84D98C4D2B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586032259D39B027E868CB43 /* RootViewController.swift */; };
 		58603653E0DD3C8F576C58C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586031C1429BB8C1394F5811 /* Assets.xcassets */; };
+		586036A81BDFCB3AE1871CCF /* UIColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603DF5B8171B432FDFE70C /* UIColorUtil.swift */; };
 		58603BD541E348F971B51E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586037F7DC6EA907D3115FA9 /* AppDelegate.swift */; };
 		58603C5CC84C85DFD2845581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58603423EC872890D90DB28D /* LaunchScreen.storyboard */; };
 		58603D35A5C3600D393EC188 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603559F92AEC4B6B5AC9D3 /* FirstViewController.swift */; };
@@ -26,6 +27,7 @@
 		58603423EC872890D90DB28D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58603559F92AEC4B6B5AC9D3 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		586037F7DC6EA907D3115FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		58603DF5B8171B432FDFE70C /* UIColorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorUtil.swift; sourceTree = "<group>"; };
 		58603E873CBC8344F1D6C5CE /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		84F11E92212F523600410205 /* Task-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B5D94BD9C0D22FD0635AFB /* Pods-Task-tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task-tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Task-tracker/Pods-Task-tracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,8 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				586038ACD2F0C740F2C065FB /* Root */,
-				5860370337D4E21BB4534CD2 /* FistTab */,
+				5860370337D4E21BB4534CD2 /* ActiveTasks */,
 				58603C33EE3BB41C036AD9E3 /* SecondTab */,
+				58603EAEAE48EE622F97F3F8 /* Util */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -89,12 +92,12 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		5860370337D4E21BB4534CD2 /* FistTab */ = {
+		5860370337D4E21BB4534CD2 /* ActiveTasks */ = {
 			isa = PBXGroup;
 			children = (
 				58603559F92AEC4B6B5AC9D3 /* FirstViewController.swift */,
 			);
-			path = FistTab;
+			path = ActiveTasks;
 			sourceTree = "<group>";
 		};
 		586037F0913266E396EB1AE5 /* Entity */ = {
@@ -136,6 +139,14 @@
 				5860339C0F88E166CE82938B /* Scene */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		58603EAEAE48EE622F97F3F8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				58603DF5B8171B432FDFE70C /* UIColorUtil.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		58603EF13C2E8EAA603362E9 /* Gateway */ = {
@@ -312,6 +323,7 @@
 				58603632AC97AC84D98C4D2B /* RootViewController.swift in Sources */,
 				58603D35A5C3600D393EC188 /* FirstViewController.swift in Sources */,
 				586035E2A7583962BDDCE3C7 /* SecondViewController.swift in Sources */,
+				586036A81BDFCB3AE1871CCF /* UIColorUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +452,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LLDD7HWZK;
 				INFOPLIST_FILE = "Task-tracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +472,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8LLDD7HWZK;
 				INFOPLIST_FILE = "Task-tracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -57,8 +57,8 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="8sh-Ff-icg" kind="relationship" relationship="viewControllers" id="Azf-2y-WWc"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -81,21 +81,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3x0-Sw-gJ0">
-                                            <rect key="frame" x="319" y="0.0" width="56" height="86.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="56" id="hbB-dY-w4s"/>
-                                            </constraints>
-                                            <color key="tintColor" red="0.41960784313725491" green="0.72549019607843135" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <state key="normal" image="play"/>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Функция поддержки и настройки виброотклика" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOV-Yq-VRX">
-                                            <rect key="frame" x="16" y="37.5" width="303" height="41"/>
+                                            <rect key="frame" x="16" y="37.5" width="343" height="41"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="J9w-Fl-rhN">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="J9w-Fl-rhN">
                                             <rect key="frame" x="16" y="8" width="24" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="2kq-Eg-VRJ"/>
@@ -118,13 +110,10 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="3x0-Sw-gJ0" firstAttribute="top" secondItem="u0T-Jl-xia" secondAttribute="top" id="4Y9-lD-Nfv"/>
-                                        <constraint firstAttribute="trailing" secondItem="3x0-Sw-gJ0" secondAttribute="trailing" id="Tio-AD-bAE"/>
                                         <constraint firstItem="J9w-Fl-rhN" firstAttribute="leading" secondItem="u0T-Jl-xia" secondAttribute="leading" constant="16" id="WSJ-jK-btU"/>
                                         <constraint firstItem="HOV-Yq-VRX" firstAttribute="leading" secondItem="J9w-Fl-rhN" secondAttribute="leading" id="WnV-fQ-MlR"/>
+                                        <constraint firstAttribute="trailing" secondItem="HOV-Yq-VRX" secondAttribute="trailing" constant="16" id="and-2x-ThV"/>
                                         <constraint firstItem="YVs-Lf-9cs" firstAttribute="leading" secondItem="J9w-Fl-rhN" secondAttribute="trailing" constant="8" id="fVF-WF-tgI"/>
-                                        <constraint firstItem="3x0-Sw-gJ0" firstAttribute="leading" secondItem="HOV-Yq-VRX" secondAttribute="trailing" id="gUs-Js-GaO"/>
-                                        <constraint firstAttribute="bottom" secondItem="3x0-Sw-gJ0" secondAttribute="bottom" id="iOC-7c-95L"/>
                                         <constraint firstItem="HOV-Yq-VRX" firstAttribute="top" secondItem="J9w-Fl-rhN" secondAttribute="bottom" constant="5.5" id="kL6-41-we1"/>
                                         <constraint firstAttribute="bottom" secondItem="HOV-Yq-VRX" secondAttribute="bottom" constant="8" id="tzy-9k-3b4"/>
                                         <constraint firstItem="J9w-Fl-rhN" firstAttribute="top" secondItem="u0T-Jl-xia" secondAttribute="top" constant="8" id="v1j-O1-hqm"/>
@@ -221,6 +210,5 @@
         <image name="play" width="18" height="18"/>
         <image name="plus" width="18" height="18"/>
         <image name="second" width="30" height="30"/>
-        <image name="timer" width="18" height="18"/>
     </resources>
 </document>
