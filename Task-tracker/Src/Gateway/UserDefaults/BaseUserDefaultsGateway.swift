@@ -11,11 +11,25 @@ class BaseUserDefaultsGateway {
 
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
+    private var currentVersion = 1
     var defaults: UserDefaults
 
 
     init(_ preference: UserDefaults) {
         self.defaults = preference
+        migrate()
+    }
+
+    private func migrate() {
+        let versionKey = UserDefaultKey.userDefaultsVersion.rawValue
+        let version: Int = defaults.integer(forKey: versionKey)
+        if currentVersion > version {
+            let dictionary = defaults.dictionaryRepresentation()
+            dictionary.keys.forEach { key in
+                defaults.removeObject(forKey: key)
+            }
+            defaults.set(currentVersion, forKey: versionKey)
+        }
     }
 
     func read<T: Codable>(_ key: UserDefaultKey) throws -> T? {
@@ -23,7 +37,12 @@ class BaseUserDefaultsGateway {
         guard data != nil else {
             return nil
         }
-        return try decoder.decode(T.self, from: data!)
+        if isPrimitive(T.self) {
+            let holder = try decoder.decode(PrimitiveHolder<T>.self, from: data!)
+            return holder.value
+        } else {
+            return try decoder.decode(T.self, from: data!)
+        }
     }
 
     func save<T: Codable>(_ key: UserDefaultKey, _ value: T?) throws {
@@ -32,8 +51,14 @@ class BaseUserDefaultsGateway {
             defaults.set(nil, forKey: key.rawValue)
             return
         }
-        let data = try encoder.encode(value)
+
+        let data = try isPrimitive(value) ?
+                encoder.encode(PrimitiveHolder(value: value)) : encoder.encode(value)
         defaults.set(data, forKey: key.rawValue)
+    }
+
+    private func isPrimitive<T>(_ value: T?) -> Bool {
+        return value is String || value is Int
     }
 
     func readRx<T: Codable>(_ key: UserDefaultKey) -> Single<T> {

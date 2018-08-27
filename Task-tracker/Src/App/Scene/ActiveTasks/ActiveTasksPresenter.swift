@@ -12,12 +12,13 @@ protocol ActiveTasksPresenter {
     func selectTask(at: Int)
     func showTaskInfo(at: Int)
     func doneTask(at: Int)
+    func doExportTasks()
     func doCreateTask()
     func saveState()
 }
 
 
-protocol ActiveTasksView {
+protocol ActiveTasksView: BaseView {
 
     func refresh()
     func showNewTaskDialog(_ onResult: @escaping (String) -> Void)
@@ -62,6 +63,7 @@ class ActiveTasksPresenterImp: ActiveTasksPresenter {
             self.tasks = tasks
             self.view.refresh()
         }, onError: { error in
+            print("ActiveTasksPresenter: doLoadTasks error", error)
         })
     }
 
@@ -94,9 +96,29 @@ class ActiveTasksPresenterImp: ActiveTasksPresenter {
     func doCreateTask() {
         view.showNewTaskDialog { desc in
             let task = TaskEntity(false, desc)
+            task.timerInfo.createdTimestamp = Date().timeIntervalSince1970
             _ = self.tasksGateway.addOrUpdate(task).subscribe { event in
                 self.doLoadTasks()
             }
         }
+    }
+
+    func doExportTasks() {
+        taskTimer.saveAll()
+        _ = tasksGateway.getAll().subscribe(onSuccess: { tasks in
+            let formatter = DateComponentsFormatter()
+            formatter.unitsStyle = .positional
+            formatter.allowedUnits = [.hour, .minute, .second]
+            formatter.zeroFormattingBehavior = .pad
+
+            let output = tasks.map { task -> String in
+                let time = formatter.string(from: task.timerInfo.totalTime) ?? "o_O"
+                let date = Date(timeIntervalSince1970: task.timerInfo.createdTimestamp)
+                return "Описание: \(task.desc ?? "Не указано"), начата в \(date), длительность \(time)"
+            }.joined(separator: "\n")
+
+            UIPasteboard.general.string = output
+            self.view.showDialog(message: "Скопировано")
+        })
     }
 }

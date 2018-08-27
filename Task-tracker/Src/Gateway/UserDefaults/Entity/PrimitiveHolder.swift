@@ -6,8 +6,6 @@
 import Foundation
 
 
-enum UserDefaultKey: String {
-    case userDefaultsVersion
-    case tasksList
+struct PrimitiveHolder<T: Codable>: Codable {
+    let value: T
 }
-

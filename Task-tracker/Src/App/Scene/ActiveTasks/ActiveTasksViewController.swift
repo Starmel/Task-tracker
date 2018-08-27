@@ -13,6 +13,10 @@ class ActiveTasksViewController: BaseUITableViewController {
 
     var presenter: ActiveTasksPresenter!
 
+    @IBAction func onShareButtonClick(_ sender: Any) {
+        presenter.doExportTasks()
+    }
+
     @IBAction func onCreateTaskButtonClick(_ sender: Any) {
         presenter.doCreateTask()
     }

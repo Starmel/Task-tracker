@@ -11,6 +11,7 @@ class TimerInfoEntity: Codable {
 
     var isRunning: Bool = false
     var totalTime: TimeInterval = 0
+    var createdTimestamp: TimeInterval = 0
     var runTimestamp: TimeInterval = 0
     var stopTimestamp: TimeInterval = 0
 
