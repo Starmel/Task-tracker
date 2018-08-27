@@ -43,10 +43,30 @@ class TimerInfoEntity: Codable {
 
 
 extension TimerInfoEntity: Equatable {
+
     static func ==(lhs: TimerInfoEntity, rhs: TimerInfoEntity) -> Bool {
         return lhs.isRunning == rhs.isRunning &&
                 lhs.totalTime == rhs.totalTime &&
                 lhs.runTimestamp == rhs.runTimestamp &&
                 lhs.stopTimestamp == rhs.stopTimestamp;
+    }
+}
+
+
+extension TimerInfoEntity: Hashable {
+
+    public var hashValue: Int {
+        return isRunning.hashValue ^
+                totalTime.hashValue ^
+                runTimestamp.hashValue ^
+                stopTimestamp.hashValue
+    }
+}
+
+
+extension TimerInfoEntity: CustomStringConvertible {
+
+    public var description: String {
+        return "isRunning \(isRunning), totalTime \(totalTime), runTimestamp \(Date(timeIntervalSince1970: runTimestamp)), stopTimestamp \(Date(timeIntervalSince1970: stopTimestamp))"
     }
 }

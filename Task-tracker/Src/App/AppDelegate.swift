@@ -20,5 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDependencies.build()
         return true
     }
+
+    func application(_ application: UIApplication,
+                     shouldSaveApplicationState coder: NSCoder) -> Bool {
+        print("AppDelegate: save app state")
+        return true
+    }
 }
 

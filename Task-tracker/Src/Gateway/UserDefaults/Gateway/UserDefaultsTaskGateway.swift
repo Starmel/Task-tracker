@@ -16,9 +16,9 @@ class UserDefaultsTaskGateway: BaseUserDefaultsGateway, TaskGateway {
         return getAll()
                 .defaultValue(value: [])
                 .flatMapCompletable { (list: [TaskEntity]) -> Completable in
-                    var tasks = list
-                    tasks.append(task)
-                    return self.saveRx(.tasksList, tasks)
+                    var tasks = Set(list)
+                    tasks.update(task)
+                    return self.saveRx(.tasksList, Array(tasks))
                 }
     }
 
