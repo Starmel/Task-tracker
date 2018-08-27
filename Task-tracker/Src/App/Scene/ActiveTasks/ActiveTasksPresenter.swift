@@ -12,12 +12,15 @@ protocol ActiveTasksPresenter {
     func selectTask(at: Int)
     func showTaskInfo(at: Int)
     func doneTask(at: Int)
+    func doCreateTask()
     func saveState()
 }
 
 
 protocol ActiveTasksView {
+
     func refresh()
+    func showNewTaskDialog(_ onResult: @escaping (String) -> Void)
 }
 
 
@@ -51,6 +54,10 @@ class ActiveTasksPresenterImp: ActiveTasksPresenter {
     }
 
     func viewDidLoad() {
+        doLoadTasks()
+    }
+
+    private func doLoadTasks() {
         _ = tasksGateway.getAll().subscribe(onSuccess: { tasks in
             self.tasks = tasks
             self.view.refresh()
@@ -82,5 +89,14 @@ class ActiveTasksPresenterImp: ActiveTasksPresenter {
 
     func saveState() {
         taskTimer.saveAll()
+    }
+
+    func doCreateTask() {
+        view.showNewTaskDialog { desc in
+            let task = TaskEntity(false, desc)
+            _ = self.tasksGateway.addOrUpdate(task).subscribe { event in
+                self.doLoadTasks()
+            }
+        }
     }
 }

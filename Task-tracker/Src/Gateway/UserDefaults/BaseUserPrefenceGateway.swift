@@ -42,7 +42,7 @@ class BaseUserDefaultsGateway {
                 if let value: T = try self.read(key) {
                     observer(.success(value))
                 } else {
-                    throw NSError(domain: "reading nil value", code: 0)
+                    throw UserDefaultsGatewayError.readingNilValue
                 }
             } catch {
                 observer(.error(error))
@@ -61,5 +61,18 @@ class BaseUserDefaultsGateway {
             }
             return Disposables.create()
         }
+    }
+}
+
+
+extension Single {
+
+    func defaultValue(value: Element) -> Single<Element> {
+        return asObservable().catchError {
+            if $0 is UserDefaultsGatewayError {
+                return .just(value)
+            }
+            return .error($0)
+        }.asSingle()
     }
 }

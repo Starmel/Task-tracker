@@ -13,7 +13,8 @@ class UserDefaultsTaskGateway: BaseUserDefaultsGateway, TaskGateway {
 
 
     func addOrUpdate(_ task: TaskEntity) -> Completable {
-        return readRx(.tasksList)
+        return getAll()
+                .defaultValue(value: [])
                 .flatMapCompletable { (list: [TaskEntity]) -> Completable in
                     var tasks = list
                     tasks.append(task)

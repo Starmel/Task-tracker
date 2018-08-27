@@ -13,6 +13,9 @@ class ActiveTasksViewController: BaseUITableViewController {
 
     var presenter: ActiveTasksPresenter!
 
+    @IBAction func onCreateTaskButtonClick(_ sender: Any) {
+        presenter.doCreateTask()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,5 +100,17 @@ extension ActiveTasksViewController: ActiveTasksView {
     func refresh() {
         tableView.reloadData()
         refreshControl?.endRefreshing()
+    }
+
+    func showNewTaskDialog(_ onResult: @escaping (String) -> Void) {
+        let alert = UIAlertController(title: "Новая задача", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Создать", style: .default) { action in
+            onResult(alert.textFields![0].text ?? "Без названия")
+        })
+        alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
+        alert.addTextField(configurationHandler: { (textField: UITextField!) in
+            textField.placeholder = "Описание:"
+        })
+        self.present(alert, animated: true, completion: nil)
     }
 }
