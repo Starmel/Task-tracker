@@ -25,4 +25,15 @@ class UserDefaultsTaskGateway: BaseUserDefaultsGateway, TaskGateway {
     func getAll() -> Single<[TaskEntity]> {
         return readRx(.tasksList)
     }
+
+    func remove(_ task: TaskEntity) -> Completable {
+        return readRx(.tasksList)
+                .flatMapCompletable { (tasks: [TaskEntity]) in
+                    var tasks: [TaskEntity] = tasks
+                    if let index = tasks.index(of: task) {
+                        tasks.remove(at: index)
+                    }
+                    return self.saveRx(.tasksList, tasks)
+                }
+    }
 }

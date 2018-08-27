@@ -86,6 +86,9 @@ class ActiveTasksPresenterImp: ActiveTasksPresenter {
     }
 
     func doneTask(at: Int) {
+        _ = tasksGateway.remove(tasks[at]).subscribe(onCompleted: {
+            self.doLoadTasks()
+        })
         // TODO 27.08.2018/admin переводить задачу на следующий трекер
     }
 

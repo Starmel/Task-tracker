@@ -10,6 +10,6 @@ import RxSwift
 protocol TaskGateway {
 
     func addOrUpdate(_ task: TaskEntity) -> Completable
-
     func getAll() -> Single<[TaskEntity]>
+    func remove(_ task: TaskEntity) -> Completable
 }
